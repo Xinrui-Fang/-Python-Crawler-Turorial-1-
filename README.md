@@ -55,3 +55,64 @@
 * 官方推荐做法，非常快，而且好用  
 * [Request](http://www.python-requests.org/en/master/user/quickstart/)库链接  
 
+## 正则表达式re
+`import urllib2`</br>
+`import re`
+
+`reg=r'http.(d+).jpg'`</br>
+`reg=re.compile(reg)`</br>
+`response=urllib2.urlopen("http://xxx.com")`</br>
+`result=re.findall(response.read(),reg)`</br>
+* 用来匹配文档  
+## beautifulsoap 
+`from bs4 import BeautifulSoup`</br>
+`soup = BeautifulSoup(html_doc, 'html.parser')`
+
+`print(soup.prettify())`
+
+`###`</br>
+`<html>`</br>
+   ` <head>`</br>
+      `  <title>首页</title>`</br>
+   ` </head>`</br>
+   ` <body>`</br>
+    `    <h1>我是标题</h1>`</br>
+     `   <img src="xxx">`</br>
+    `</body>`</br>
+`</html>`
+
+`soup.title`</br>
+`# <title>The Dormouse's story</title>`</br>
+
+`soup.title.name`</br>
+`# u'title'`
+
+`soup.title.string`</br>
+`# u'The Dormouse's story'`
+
+`soup.title.parent.name`</br>
+`# u'head'`
+
+`soup.p`</br>
+`# <p class="title"><b>The Dormouse's story</b></p>`
+
+`soup.p['class']`</br>
+`# u'title'`
+
+`soup.a`</br>
+`# <a class="sister" href="http://example.com/elsie" id="link1">Elsie</a>`
+
+`soup.find_all('a')</br>
+`# [<a class="sister" href="http://example.com/elsie" id="link1">Elsie</a>,`</br>
+`#  <a class="sister" href="http://example.com/lacie" id="link2">Lacie</a>,`</br>
+`#  <a class="sister" href="http://example.com/tillie" id="link3">Tillie</a>]`
+
+`soup.find(id="link3")`</br>
+`# <a class="sister" href="http://example.com/tillie" id="link3">Tillie</a>`
+
+* 用来编译HTML代码的专业库
+
+## pyquery
+[pyquery](http://aljun.me/post/17)库链接 
+* pyquery是以jquery的选择器语法为基础，非常适合前端转来的
+
