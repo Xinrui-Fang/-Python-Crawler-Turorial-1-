@@ -44,3 +44,13 @@
 `}`</br>
 `request=urllib2.request("http://xxx.com",data)`</br>
 `response=urllib2.urlopen(request)`</br>
+
+## 爬取图片
+`import urllib`
+
+`path="xxx.png"`</br>
+`url="http://zhaduixueshe.com/static/pic/discovery.png"`
+
+`urllib.urlretrieve(url,path)`</br>
+* 官方推荐做法，非常快，而且好用  
+* [Request](http://www.python-requests.org/en/master/user/quickstart/)
