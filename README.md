@@ -116,3 +116,12 @@
 [pyquery](http://aljun.me/post/17)库链接 
 * pyquery是以jquery的选择器语法为基础，非常适合前端转来的
 
+## 调用json格式
+`In [1]: import urllib2`
+
+`In [2]: response=urllib2.urlopen("http://aljun.me/like")`
+
+`In [3]: print response.read()`</br>
+`{`</br>
+  `"liked": 1647`</br>
+`}`</br>
