@@ -53,4 +53,5 @@
 
 `urllib.urlretrieve(url,path)`</br>
 * 官方推荐做法，非常快，而且好用  
-* [Request](http://www.python-requests.org/en/master/user/quickstart/)
+* [Request](http://www.python-requests.org/en/master/user/quickstart/)库链接  
+
